@@ -7,19 +7,22 @@ class ViewModel :ViewModel(){
 
     private var counter =0
     val counterDisplayNumberOfClick = MediatorLiveData<Int>()
-    val counterDisplayHistory = MediatorLiveData<String>()
+    val counterDisplayHistory = MediatorLiveData<ArrayList<String>>()
+    val list  = arrayListOf<String>()
 
 
     fun onIncrementCLick(){
         counter++
         counterDisplayNumberOfClick.value = counter
-        counterDisplayHistory.value = "+"
+        list.add("+")
+        counterDisplayHistory.value = list
     }
 
     fun onDecrementCLick(){
         counter--
         counterDisplayNumberOfClick.value = counter
-        counterDisplayHistory.value = "-"
+        list.add("-")
+        counterDisplayHistory.value = list
     }
 
 

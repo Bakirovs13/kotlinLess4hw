@@ -19,12 +19,6 @@ class ThirdFragment : Fragment() {
     private val fullList = mutableListOf<String>()
 
 
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-
-    }
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -39,8 +33,7 @@ class ThirdFragment : Fragment() {
 
         viewModel.counterDisplayHistory.observe(requireActivity()){
 
-             fullList.add(it.toString())
-            adapter = RvAdapter(fullList)
+            adapter = RvAdapter(it)
             binding.operationsRv.adapter =adapter
 
         }

@@ -9,6 +9,12 @@
     android:orientation="vertical"
     >
 
+    <TextView
+        android:visibility="gone"
+        android:textSize="24sp"
+        android:id="@+id/operationHistory_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/operations_rv"
